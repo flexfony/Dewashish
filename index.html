@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dewashsish Goutam</title>
+    <link rel="stylesheet" href="navigation.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="navigation">
+        <div class="menuToggle"> </div>
+        <ul>
+            <li class="list active" style="--clr:#f44336;">
+                <a href="#">
+                    <span class="icon"><ion-icon name="home-outline"></ion-icon></span>
+                    <span class="text">Home</span>
+                </a>
+            </li>
+            <li class="list" style="--clr:#148fc0;">
+                <a href="#mySkills">
+                    <span class="icon"><ion-icon name="accessibility-outline"></ion-icon></span>
+                    <span class="text">About</span>
+                </a>
+            </li>
+            <li class="list" style="--clr:#f50097;">
+                <a href="#">
+                    <span class="icon"><ion-icon name="person-outline"></ion-icon></span>
+                    <span class="text">Profile</span>
+                </a>
+            </li>
+            <li class="list" style="--clr:#6cf436;">
+                <a href="#">
+                    <span class="icon"><ion-icon name="chatbubble-ellipses-outline"></ion-icon></span>
+                    <span class="text">Messages</span>
+                </a>
+            </li>
+            <li class="list" style="--clr:#f87000;">
+                <a href="#">
+                    <span class="icon"><ion-icon name="settings-outline"></ion-icon></span>
+                    <span class="text">Settings</span>
+                </a>
+            </li>
+        </ul>
+
+    </div>
+    <div class="main">
+        <div class="mobigation">
+            <div class="mobileToggle"> </div>
+        </div>
+        <div class="wrapper">
+            <div class="home">
+                <div class="profile">
+                    <img src="assets/profile.png" alt="" >
+                </div>
+                <div class="iText">
+                    <h1>Hi, I'm
+                    </h1>
+                    <h1><span>Dewashish Goutam</span></h1>
+                    <p>I do Design, 3D Modeling & Animation</p>
+                </div>
+            </div> <!--Home end-->
+
+            <div class="skills" id="mySkills">
+                <h1 class="txt-white">My Skills</h1>
+                <div class="skill-card">
+                    <div class="card">
+                        <div class="icon"><img src="assets/icons/ps.png" alt=""></div>
+                        <div class="card-text">
+                        <h3>ADOBE PHOTOSHOP</h3>
+                        <p class="txt-grey">Level: 8/10</p>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="icon"><img src="assets/icons/maya.png" alt=""></div>
+                        <div class="card-text">
+                            <h3>AUTODESK MAYA</h3>
+                            <p class="txt-grey">Level: 8/10</p>
+                            </div>
+                    </div>
+                </div>
+
+                <div class="skill-card">
+                    <div class="card">
+                        <div class="icon"><img src="assets/icons/zbrush.png" alt=""></div>
+                        <div class="card-text">
+                            <h3>PIXOLOGIC ZBRUSH</h3>
+                            <p class="txt-grey">Level: 8/10</p>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="icon"><img src="assets/icons/substance-painter.png" alt=""></div>
+                        <div class="card-text">
+                            <h3>SUBSTANCE PAINTER</h3>
+                            <p class="txt-grey">Level: 8/10</p>
+                            </div>
+                    </div>
+                </div>
+                
+            
+
+
+            </div>
+        </div>
+
+
+            
+        </div>
+    </div>
+
+
+
+    <script>
+        const mobileToggle = document.querySelector('.mobileToggle');
+        const mobigation = document.querySelector('.mobigation');
+        mobileToggle.onclick = function(){
+            mobigation.classList.toggle('openM')
+            navigation.classList.toggle('openM')
+            main.classList.toggle('openM')
+                 
+        }
+    </script>
+    <script>
+        const menuToggle = document.querySelector('.menuToggle');
+        const navigation = document.querySelector('.navigation');
+        const main = document.querySelector('.main');
+        menuToggle.onclick = function(){
+            navigation.classList.toggle('open')
+            main.classList.toggle('openbar')
+            
+        }
+
+        const list = document.querySelectorAll('.list');
+        function activeLink(){
+            list.forEach((item) =>
+            item.classList.remove('active'));
+            this.classList.add('active');
+        }
+        list.forEach((item)=>
+        item.addEventListener('click',activeLink))
+    </script>
+    
+<!-- Icon Package---->>
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

@@ -1,0 +1,156 @@
+.txt-white{
+    color: #fff;
+}
+.txt-light{
+    color: rgb(241, 231, 231);
+}
+.txt-grey{
+    color:#444343;
+    font-weight: 300;
+}
+.wrapper{
+    scroll-behavior:smooth;
+}
+.wrapper .home{
+    height:100vh;
+    display: flex;
+    align-items:center;
+    padding: 20px 40px;
+    gap:135px;
+    
+
+}
+.wrapper .home .profile{
+    margin-left:30px;
+    
+}
+.wrapper .home .profile img{
+    width:400px;
+}
+.wrapper .home .iText h1,h2,p{
+    color:rgb(241, 231, 231);
+    font-weight: 100;
+}
+.wrapper .home .iText h1{
+    font-size: 80px;
+    font-weight: 100;
+    line-height:80px;
+}
+.wrapper .home .iText p{
+    margin-top:20px;
+    font-size: 25px;
+}
+.wrapper .home .iText h1 span{
+    color:#f44336;
+    font-weight: 200;
+    animation: color 2s ease-in-out infinite alternate-reverse;
+    
+}
+@keyframes color{
+    from {color: #f44336;}
+    to {color: rgb(240, 240, 33);}
+}
+
+/* SKILLS */
+.wrapper .skills{
+    height: 100vh;
+}
+.wrapper .skills .skill-card{
+    margin-top: 10px;
+    display:flex;
+    justify-content:center;
+    gap: 50px;
+}
+.wrapper .skills .skill-card .card{
+    position:relative;
+    width: 400px; height:110px; 
+    padding:30px;
+    margin:50px 10px;
+    display: flex;
+    gap:15px;
+    background: #e0e1e4;
+    border:5px solid transparent;
+    border-radius: 25px;
+    transition: 1s;
+}
+
+.wrapper .skills .skill-card .card .icon img{
+    width:90px;
+    margin-top:-50px;
+    transition:0.5s;
+}
+.wrapper .skills .skill-card .card:hover{
+    border:5px solid #23c1f1;
+}
+.wrapper .skills .skill-card .card:hover .icon img{
+    margin-top:-65px;
+}
+.wrapper .skills .skill-card .card .card-text{
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+
+}
+
+
+
+/*RESPONSIVE CSS*/
+@media only screen and (max-width: 1240px) {
+    .wrapper .home{
+        gap:50px;
+    }
+    .wrapper .home .profile{
+        margin-left:-50px;
+    }
+    .wrapper .home .iText h1{
+        font-size: 60px;
+    }
+    .wrapper .home .iText p{
+        font-size: 20px;
+    }
+
+}
+
+@media only screen and (max-width: 960px) {
+    .wrapper .home{
+        gap:30px;
+    }
+    .wrapper .home .profile img{
+        width:300px;
+    }
+    .wrapper .skills .skill-card{
+        flex-direction: column;
+        gap:5px;
+        padding:5px;
+        margin:0px;
+    }
+    .wrapper .skills .skill-card .card{
+        width:400px; height: 100px;
+    }
+
+}
+
+@media only screen and (max-width: 790px) {
+    .wrapper .home{
+        flex-direction: column;
+    }
+    .wrapper .home .profile{
+        margin-left:0;
+        align-self:flex-start;
+    }
+    .wrapper .home .profile img{
+        width:200px;
+    }
+    .wrapper .home .iText{
+        align-self: flex-start;
+    }
+    .wrapper .home .iText h1{
+        font-size:45px;
+        line-height: 45px;
+
+    }
+    .wrapper .skills .skill-card .card{
+        width:300px; height: 120px;
+    }
+
+}
